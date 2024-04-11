@@ -7,6 +7,9 @@
     <meta name="description" content="Königsrolle, Knusprig - Köstlich - Königlich. Willkommen auf meiner dynamischen Website. Entdecke das Unbekannte.">
     <meta name="keywords" content="Keks, doppelte Fuellung, doppelte Füllung,Koenigsrolle, Königsrolle, Bester Keks, Eco Verpackung, Neue Verpackung, ECO">
     <title>Königsrolle</title>
+    <link rel="icon" type="image/svg+xml" href="images/krone_gold.svg">
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -27,7 +30,7 @@
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="bi bi-list" style="font-size: 3rem;color: white;"></span>
                 </button>
                 <!-- Navbar-Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -54,20 +57,13 @@
 
         <section class="hero-section" id="section_1">
             <div class="section-overlay"></div>
-
             <div class="container d-flex justify-content-center align-items-center">
                 <div class="row">
-
                     <div class="col-12 mt-auto mb-5 text-center">
-
                         <h1 class="text-white mb-5" style="font-size: 7rem;">Königsrolle</h1>
                         <small>Knusprig - Köstlich - Königlich</small>
-                        
                     </div>
-
                     <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
-                        
-
                         <div class="location-wrap mx-auto py-3 py-lg-0">
                             <p class="text-white" style="font-size: 2rem;">
                                 Neue Nachhaltige Verpackung
@@ -78,12 +74,9 @@
                                 Doppelte Füllung
                             </p>
                         </div>
-
-                        
                     </div>
                 </div>
             </div>
-
             <div class="image-wrap">
                 <img src="images/hero.png" class="custom-image" alt="Hero Image">
             </div>
@@ -313,11 +306,10 @@
                         <h6>3370 Ybbs an der Donau, Schulring 1, IT-HTL</h6>
                         <div class="contact-social">
                             <ul>
-                                <li><a class="hover-target" href=""><span class="bi bi-facebook text-white"></span></a></li>
-                                <li><a class="hover-target" href=""><span class="bi bi-linkedin text-white"></span></a></li>
-                                <li><a class="hover-target" href=""><span class="bi bi-github text-white"></span></a></li>
-                                <li><a class="hover-target" href=""><span class="bi bi-behance text-white"></span></a></li>
-                                <li><a class="hover-target" href=""><span class="bi bi-pinterest text-white"></span></a></li>
+                                <li><a href=""><span class="bi bi-facebook text-white"></span></a></li>
+                                <li><a href=""><span class="bi bi-linkedin text-white"></span></a></li>
+                                <li><a href=""><span class="bi bi-github text-white"></span></a></li>
+                                <li><a href=""><span class="bi bi-pinterest text-white"></span></a></li>
                             </ul>                 
                         </div>
                     </div>
@@ -330,39 +322,37 @@
         Copyright &copy; 2024
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
     <script src="https://cdn.babylonjs.com/babylon.js"></script>
     <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 
-
-
+    <script src="js/page_reveal_script.js"></script>
+    <script src="js/carousel_script.js"></script>
+    <script src="js/navbar_script.js"></script>
 
     <script>
         var canvas = document.getElementById("renderCanvas");
-        var engine = new BABYLON.Engine(canvas, true);
-    
-        var createScene = function () {
-            var scene = new BABYLON.Scene(engine);
-            var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 4, 4, BABYLON.Vector3.Zero(), scene);
-            camera.attachControl(canvas, false); // Deaktiviere die Kamerasteuerung
-    
-            var light = new BABYLON.HemisphericLight("hemiLight", new BABYLON.Vector3(1, 1, 0), scene);
+    var engine = new BABYLON.Engine(canvas, true);
 
-            BABYLON.SceneLoader.ImportMesh("", "model/", "verpackung_modell_website.obj", scene, function (meshes) {
-                console.log("Modell geladen:", meshes);
-            });
-    
-            return scene;
+    var createScene = function () {
+        var scene = new BABYLON.Scene(engine);
+        var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 4, 4, BABYLON.Vector3.Zero(), scene);
+        camera.attachControl(canvas, false); // Deaktiviere die Kamerasteuerung
+
+        var light = new BABYLON.HemisphericLight("hemiLight", new BABYLON.Vector3(1, 1, 0), scene);
+
+        BABYLON.SceneLoader.ImportMesh("", "model/", "verpackung_modell_website.obj", scene, function (meshes) {
+            console.log("Modell geladen:", meshes);
+        });
+
+        return scene;
         };
-    
+
         var scene = createScene();
         canvas.addEventListener("mousedown", function () {
             scene.activeCamera.attachControl(canvas, true);
@@ -371,50 +361,17 @@
         canvas.addEventListener("blur", function () {
             scene.activeCamera.detachControl(canvas);
         });
-    
+
         engine.runRenderLoop(function () {
             scene.render();
         });
-    
+
         window.addEventListener("resize", function () {
             engine.resize();
         });
-    </script>
-    
-    <script>
-    $(document).ready(function(){
-        function triggerPageReveal() {
-            $('.page-reveal').each(function(){
-                var top_of_element = $(this).offset().top;
-                var bottom_of_window = $(window).scrollTop() + $(window).height();
-                if(bottom_of_window > top_of_element) {
-                    $(this).addClass('active');
-                }
-            });
-        }
-        triggerPageReveal();
-        $(window).scroll(function() {
-            triggerPageReveal();
-        });
-    });
 
     </script>
 
-    <script>
-        $(document).ready(function(){
-        $('#carouselExampleIndicators').carousel();
-    });
-
-    </script>
-
-    <script>
-        function closeNavbar() {
-        var navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse.classList.contains('show')) {
-            navbarCollapse.classList.remove('show');
-        }
-    }
-    </script>
 </body>
 
 </html>
