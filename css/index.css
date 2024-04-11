@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Nunitooooo";
+  font-family: "Nunito";
   src: url("../fonts/Nunito-Regular.ttf") format("opentype");
 }
 
@@ -17,7 +17,7 @@ h3,h4,h5,h6{
 }
 
 p{
-  font-family: 'Nunitooooo';
+  font-family: 'Nunito';
 }
 /*---------------------------------------
   HERO        
@@ -90,6 +90,10 @@ p{
 -----------------------------------------*/
 .image-wrap {
   z-index: -100;
+  
+}
+.image-wrap img {
+  transform: translateY(10%);
 }
 
 .custom-image {
@@ -121,7 +125,10 @@ p{
   z-index: 9;
   color: white;
  }
- 
+ .navbar-brand {
+  filter: drop-shadow(0 0 3px gold);
+ }
+
  .navbar-brand img {
   width: 100px;
   height: auto;
@@ -302,6 +309,9 @@ ul {
     list-style: none;
 }
 
+/*---------------------------------------
+ Footer          
+-----------------------------------------*/
 .contact-area, footer {
 
     color: white; 
@@ -404,7 +414,7 @@ footer::before {
 
 
 .news-image:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 	cursor:  pointer;
 }
 br{
@@ -440,6 +450,10 @@ margin-bottom: 10px;
       width: 100%; 
   }
 }
+
+/*---------------------------------------
+ Slider         
+-----------------------------------------*/
 
 .carousel-control-prev span,
 .carousel-control-next span {
